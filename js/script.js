@@ -19,7 +19,7 @@ const casualMail = [];
 btnMail.addEventListener('click', function() {
 for (let i = 0; i < 10; i++){
     axios.get("https://flynn.boolean.careers/exercises/api/random/mail").then((resp) =>{
-        listamail.innerHTML +=`<li class="list-group-item">${resp.data.response}</li>`
+        listamail.innerHTML +=`<li class="list-group-item"> ${resp.data.response}  <i class="fa-regular fa-circle-check"></i></li>`
         btnMail.disabled = true;
         titoloLista.innerHTML = "Lista delle mail generata casualmente";
     });
